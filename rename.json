@@ -1,0 +1,5 @@
+{
+  "name.js": "js/src/module/{%= name %}.js",
+  "name.html": "html/{%= name %}.html",
+  "name.css": "css/{%= name %}.css"
+}

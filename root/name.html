@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{%= name %}</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <!--(if target dev)>
+    <!-->
+    <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="../css/{%= name %}.css" type="text/css" charset="utf-8">
+    <script>var env = "dev";</script>
+    <script src="../js/lib/zepto.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lib/template-simple.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lib/sea.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lib/spine.js" type="text/javascript" charset="utf-8"></script>
+    <!--<!(endif)-->
+    <!--(if target release)>
+    <link rel="stylesheet" href="../css/common.css?{{ver}}" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="../css/{%= name %}.css?{{ver}}" type="text/css" charset="utf-8">
+    <script>var env = 'release';</script>
+    <script src="../js/lib/lib.js?{{ver}}" type="text/javascript" charset="utf-8"></script>
+    <!(endif)-->
+    <script id="template" type="text/html">
+        
+    </script>
+</head>
+<body>
+    <!--(if target dev)>
+    <!-->
+    <script>seajs.use("../js/src/module/{%= name %}");</script>
+    <!--<!(endif)-->
+    <!--(if target release)>
+    <script src="../js/src/module/{%= name %}.js?{{ver}}" data-main="module/{%= name %}" type="text/javascript"></script>
+    <!(endif)-->
+</body>
+</html>
+
